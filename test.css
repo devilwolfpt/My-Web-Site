@@ -1,0 +1,145 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-weight: bold;
+    background-image: url("50cefc2122adfae92d31df3c13b83244.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Animação para o Header */
+header {
+    background-color: #0000003f;
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0; /* Começa invisível */
+    transform: translateY(-50px); /* Move para cima */
+    animation: slideDown 1s ease-out forwards; /* Animação de descida */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 50px;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+nav li::after {
+    transition: 0.3s;
+    transform-origin: left;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transform: scale(0);
+}
+
+nav li:hover::after {
+    transform: scale(1);
+    position: sticky;
+}
+
+/* Animação para o Footer */
+footer {
+    margin-top: auto;
+    background-color: #ffffff00;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0; /* Começa invisível */
+    transform: translateY(50px); /* Move para baixo */
+    animation: slideUp 1s ease-out 0.5s forwards; /* Animação de subida */
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    background-color: #00000077;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 0%);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+button img {
+    width: 40px;
+    height: 40px;
+}
+
+.img {
+    background-image: url("Icons/Logos/Avatar.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Definição das animações */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
