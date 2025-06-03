@@ -1,3 +1,3 @@
 # My-Web-Site
 
-[Ainda em desenvolvimento!]
+[Em desenvolvimento!]
